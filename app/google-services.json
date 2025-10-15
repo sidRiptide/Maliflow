@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "108474393249",
+    "project_id": "maliflow",
+    "storage_bucket": "maliflow.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:108474393249:android:41467789f1ea1cb06f46e0",
+        "android_client_info": {
+          "package_name": "com.example.maliflow"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC8_UChTdE-UzhS-nYWC-EohfGkn_LZwe4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
