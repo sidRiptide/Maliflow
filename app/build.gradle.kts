@@ -67,6 +67,7 @@ dependencies {
     implementation("com.github.PhilJay:MPAndroidChart:v3.1.0")
     implementation("com.squareup.okhttp3:okhttp:4.12.0")
     implementation("org.json:json:20231013")
+    implementation("androidx.compose.material:material-icons-extended:1.5.0")
 
 
 

@@ -3,6 +3,8 @@ package com.example.maliflow.ui.theme.screens
 import android.os.Build
 import androidx.annotation.RequiresApi
 import androidx.compose.foundation.layout.*
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Person
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
@@ -12,6 +14,11 @@ import androidx.navigation.NavController
 import com.example.maliflow.DarajaApiService
 import com.example.maliflow.DarajaSTKPush
 import com.example.maliflow.view_models.TransactionViewModel
+import androidx.compose.material3.TextFieldDefaults
+import androidx.compose.material.icons.filled.AttachMoney
+import androidx.compose.material.icons.filled.Phone
+import androidx.compose.material.icons.filled.SwapHoriz
+
 
 @RequiresApi(Build.VERSION_CODES.O)
 @OptIn(ExperimentalMaterial3Api::class)
@@ -27,34 +34,116 @@ fun AddTransactionScreen(navController: NavController) {
     Column(
         modifier = Modifier
             .fillMaxSize()
-            .padding(16.dp)
+            .padding(24.dp)
     ) {
+        Text(
+            text = "Add New Transaction",
+            style = MaterialTheme.typography.headlineSmall,
+            modifier = Modifier.padding(bottom = 24.dp)
+        )
+
         OutlinedTextField(
             value = amount,
             onValueChange = { amount = it },
-            label = { Text("Amount") },
-            modifier = Modifier.fillMaxWidth()
+            label = {
+                Text(
+                    "Amount",
+                    style = MaterialTheme.typography.labelLarge
+                )
+            },
+            leadingIcon = {
+                Icon(
+                    imageVector = Icons.Default.AttachMoney,
+                    contentDescription = "Amount"
+                )
+            },
+            singleLine = true,
+            shape = MaterialTheme.shapes.medium,
+//            colors = TextFieldDefaults.outlinedTextFieldColors(
+//                focusedBorderColor = MaterialTheme.colorScheme.primary,
+//                unfocusedBorderColor = MaterialTheme.colorScheme.outline
+//            ),
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(vertical = 4.dp)
         )
 
         OutlinedTextField(
             value = customer,
             onValueChange = { customer = it },
-            label = { Text("Customer Name") },
-            modifier = Modifier.fillMaxWidth()
+            label = {
+                Text(
+                    "Customer Name",
+                    style = MaterialTheme.typography.labelLarge
+                )
+            },
+            leadingIcon = {
+                Icon(
+                    imageVector = Icons.Default.Person,
+                    contentDescription = "Customer Name"
+                )
+            },
+            singleLine = true,
+            shape = MaterialTheme.shapes.medium,
+//            colors = TextFieldDefaults.outlinedTextFieldColors(
+//                focusedBorderColor = MaterialTheme.colorScheme.primary,
+//                unfocusedBorderColor = MaterialTheme.colorScheme.outline
+//            ),
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(vertical = 4.dp)
         )
 
         OutlinedTextField(
             value = type,
             onValueChange = { type = it },
-            label = { Text("Type (C2B/B2C)") },
-            modifier = Modifier.fillMaxWidth()
+            label = {
+                Text(
+                    "Type (C2B/B2C)",
+                    style = MaterialTheme.typography.labelLarge
+                )
+            },
+            leadingIcon = {
+                Icon(
+                    imageVector = Icons.Default.SwapHoriz,
+                    contentDescription = "Type"
+                )
+            },
+            singleLine = true,
+            shape = MaterialTheme.shapes.medium,
+//            colors = TextFieldDefaults.textFieldColors(
+//                focusedBorderColor = MaterialTheme.colorScheme.primary,
+//                unfocusedBorderColor = MaterialTheme.colorScheme.outline
+//            ),
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(vertical = 4.dp)
         )
 
         OutlinedTextField(
             value = phoneNumber,
             onValueChange = { phoneNumber = it },
-            label = { Text("Phone Number (e.g., 254708374149)") },
-            modifier = Modifier.fillMaxWidth()
+            label = {
+                Text(
+                    "Phone Number (e.g., 254708374149)",
+                    style = MaterialTheme.typography.labelLarge
+                )
+            },
+            leadingIcon = {
+                Icon(
+                    imageVector = Icons.Default.Phone,
+                    contentDescription = "Phone Number"
+                )
+            },
+            singleLine = true,
+            shape = MaterialTheme.shapes.medium,
+//            colors = TextFieldDefaults.outlinedTextFieldColors(
+//                focusedBorderColor = MaterialTheme.colorScheme.primary,
+//                unfocusedBorderColor = MaterialTheme.colorScheme.outline
+//            ),
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(vertical = 4.dp)
         )
 
         Spacer(modifier = Modifier.height(16.dp))
